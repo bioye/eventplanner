@@ -5,8 +5,8 @@ import TableRow from './TableRow';
 export default class EventComponent extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            eventName:'',
+        this.state ={
+            eventName:'' ,
             date: '',
             meal:'',
             venue:'',};
