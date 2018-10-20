@@ -8,7 +8,7 @@ export default class IndexComponent extends Component {
         this.state = {eventPlans: []};
     }
     componentDidMount(){
-        axios.get('http://localhost:4200/eventplan')
+        axios.get('eventplan')
         .then(response =>{
             this.setState({ eventPlans: response.data });
         })

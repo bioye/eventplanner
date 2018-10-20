@@ -19,7 +19,7 @@ export default class EditComponent extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4200/eventplan/edit/'+this.props.match.params.id)
+        axios.get('eventplan/edit/'+this.props.match.params.id)
             .then(response => {
                 this.setState({ eventName: response.data.eventName, date: response.data.date, 
                                 meal: response.data.meal, venue: response.data.venue });
