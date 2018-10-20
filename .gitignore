@@ -19,3 +19,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+server/server - Copy.js
+src/components/CreateComponent - Copy.js
+src/components/EditComponent - Copy.js
+src/components/IndexComponent - Copy.js
+src/components/TableRow - Copy.js
