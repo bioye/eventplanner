@@ -25,6 +25,7 @@
     "server": "nodemon server/server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "_start": "react-scripts start",
+    "build": "react-scripts build",
     "start": "node server/server.js",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
