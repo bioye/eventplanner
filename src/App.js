@@ -11,6 +11,11 @@ import EventComponent from './components/EventComponent';
 import CreateLinkComponent from './components/CreateLinkComponent';
 
 class App extends Component {
+
+  componentDidMount(){
+    document.title = "Awesome Event Planner";
+  }
+
   render() {
     return (
       <Router>
