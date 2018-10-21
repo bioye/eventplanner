@@ -12,7 +12,7 @@ import CreateLinkComponent from './components/CreateLinkComponent';
 
 class App extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     document.title = "Awesome Event Planner";
   }
 
