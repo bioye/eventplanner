@@ -12,7 +12,7 @@ export default class EventComponent extends Component {
             venue:'',};
     }
     componentDidMount(){
-        axios.get('http://localhost:4200/eventplan/event/'+this.props.location.state.identity)
+        axios.get('/eventplan/event/'+this.props.location.state.identity)
         .then(response =>{
             this.setState({ eventName: response.data.eventName, date: response.data.date, 
                             meal: response.data.meal, venue: response.data.venue });

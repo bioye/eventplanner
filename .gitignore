@@ -7,7 +7,7 @@
 /coverage
 
 # production
-#/build
+/build
 
 # misc
 .DS_Store
@@ -27,8 +27,8 @@ src/components/EditComponent - Copy.js
 src/components/IndexComponent - Copy.js
 src/components/TableRow - Copy.js
 
-src/*
-public/*
-build/static/css/*.map
-build/static/js/*.map
-server/*
+#src/*
+#public/*
+#build/static/css/*.map
+#build/static/js/*.map
+#server/*
