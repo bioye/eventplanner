@@ -74,19 +74,19 @@ export default class EditComponent extends Component {
                 <h3>Edit Event</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Edit Event Name:  </label>
+                        <label>Event Name:  </label>
                         <input type="text" value={this.state.eventName} className="form-control" onChange={this.onChangeEventName}/>
                     </div>
                     <div className="form-group">
-                        <label>Edit Date: </label>
+                        <label>Date: </label>
                         <input type="text" value={this.state.date} className="form-control" onChange={this.onChangeDate}/>
                     </div>
                     <div className="form-group">
-                        <label>Edit Meals: </label>
+                        <label>Meals: </label>
                         <input type="text" value={this.state.meal} className="form-control" onChange={this.onChangeMeal}/>
                     </div>
                     <div className="form-group">
-                        <label>Edit Venue: </label>
+                        <label>Venue: </label>
                         <input type="text" value={this.state.venue} className="form-control" onChange={this.onChangeVenue}/>
                     </div>
                     <div className="form-group">

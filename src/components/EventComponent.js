@@ -29,23 +29,13 @@ export default class EventComponent extends Component {
                 <table className="table table-striped">
                     <thead>
                         <tr>
-                            <td>ID</td>
-                            <td>Event Name</td>
-                            <td>Date</td>
-                            <td>Meal</td>
-                            <td>Venue</td>
-                            <td>Edit</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{this.props.match.params.id}</td>
-                            <td>{this.state.eventName}</td>
-                            <td>{this.state.date}</td>
-                            <td>{this.state.meal}</td>
-                            <td>{this.state.venue}</td>
                             <td>
-                    <Link to={"/edit/"+this.props.match.params.id} className="btn btn-primary">Edit</Link></td>
+                    <Link to={"/edit/"+this.props.match.params.id}>Click to View and Edit Your Event Plan</Link></td>
                         </tr>
                     </tbody>
                 </table>
