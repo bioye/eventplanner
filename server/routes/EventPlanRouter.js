@@ -36,6 +36,13 @@ EventPlanRouter.route('/edit/:id').get(function (req, res) {
   });
 });
 
+EventPlanRouter.route('/event/:id').get(function (req, res) {
+  const id = req.params.id;
+  EventPlan.findById(id, function (err, eventPlan){
+      res.json(eventPlan);
+  });
+});
+
 EventPlanRouter.route('/update/:id').post(function (req, res) {
   EventPlan.findById(req.params.id, function(err, eventPlan) {
     if (!eventPlan)

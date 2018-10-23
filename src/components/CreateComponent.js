@@ -54,7 +54,8 @@ export default class CreateComponent extends Component {
         axios.post('/eventplan/add', eventPlan)
         .then(res => console.log(res.data));
 
-        console.log(`event name is ${this.state.eventName}, date is ${this.state.date}, meals are ${this.state.meal}, venue is ${this.state.venue}`);
+        console.log(`event name is ${this.state.eventName}, date is ${this.state.date}, 
+                        meals are ${this.state.meal}, venue is ${this.state.venue}`);
         this.setState({
             eventName:'',
             date: '',

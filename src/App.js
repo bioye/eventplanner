@@ -28,7 +28,7 @@ class App extends Component {
                   <Link to={'/'} className="nav-link">Home</Link>
                 </li>
                 <li>
-                  <Link to={'/create'} className="nav-link">Create</Link>
+                  <Link to={'/createlink'} className="nav-link">Create</Link>
                 </li>
                 <li>
                   <Link to={'/index'} className="nav-link">Index</Link>
@@ -40,11 +40,10 @@ class App extends Component {
             </div>
           </nav>
             <Switch>
-              <Route exact path='/create' component={CreateComponent} />
               <Route path='/edit/:id' component={EditComponent} />
               <Route exact path='/index' component={IndexComponent} />
-              <Route exact path='/event' component={EventComponent} />
-              <Route exact path='/eventlink' component={CreateLinkComponent} />
+              <Route exact path='/event/:id' component={EventComponent} />
+              <Route exact path='/createlink' component={CreateLinkComponent} />
             </Switch>
         </div>
       </Router>

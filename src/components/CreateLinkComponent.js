@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 export default class CreateComponent extends Component {
@@ -12,11 +13,12 @@ export default class CreateComponent extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            eventName:'',
+            eventName: '',
             date: '',
-            meal:'',
-            venue:'',
-            identity:'',
+            meal: '',
+            venue: '',
+            identity: '',
+            toLink: false,
         }
     }
     
@@ -52,20 +54,26 @@ export default class CreateComponent extends Component {
             meal: this.state.meal,
             venue: this.state.venue,
         }
-        axios.post('http://localhost:4200/eventplan/add', eventPlan)
+        axios.post('/eventplan/add', eventPlan)
         .then(res => {
             console.log(res.data.msg+', '+res.data.id);
-            !this.isCancelled && this.setState({identity: res.data.id})
+            !this.isCancelled && this.setState({identity: res.data.id});
+            this.setState({toLink: true})
         });
 
         console.log(`event name is ${this.state.eventName}, date is ${this.state.date}, meals are ${this.state.meal}, venue is ${this.state.venue}`);
-        this.props.history.push({
+        /* this.props.history.push({
             pathname: '/event',
             state: {identity: this.state.identity}
-        });
+        }); */
     }
 
     render() {
+
+        if(this.state.toLink === true){
+            return <Redirect to={'/event/' + this.state.identity} />
+        }
+
         return (
             <div style={{marginTop: 50}}>
                 <h3>Add New Event</h3>
